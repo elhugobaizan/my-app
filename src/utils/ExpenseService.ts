@@ -39,3 +39,14 @@ export async function removeExpense(expense: Expense) {
     return {status: 'error', message: error.message};
   }
 }
+
+export async function getExpense(id: number) {
+  try {
+    const expenses = await AsyncStorage.getItem('expenses');
+    const parsedExpenses = expenses ? JSON.parse(expenses) : [];
+    const foundExpense = parsedExpenses.find((e: Expense) => e.id === id);
+    return foundExpense ? foundExpense : {};
+  } catch (error: any) {
+    return {status: 'error', message: error.message};    
+  }
+}
