@@ -2,10 +2,8 @@ import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import { Picker } from '@react-native-picker/picker';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 import { styles } from '@/styles';
-import { Expense } from '@/types';
 import { updateExpense } from '@/utils/ExpenseService';
 
 const categories = [

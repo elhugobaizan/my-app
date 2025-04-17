@@ -2,17 +2,17 @@ import { Expense } from "@/types";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export async function createExpense(expense: Expense) {
-  return { status: 'OK', message: 'Expense created successfully' }; 
-  /* try {    
+  try {    
     const expenses = await AsyncStorage.getItem('expenses'); 
     const parsedExpenses = expenses ? JSON.parse(expenses) : [];
     expense.id = parsedExpenses.length+1;
     expense.date = new Date();
     parsedExpenses.push(expense);
     await AsyncStorage.setItem('expenses', JSON.stringify(parsedExpenses));
+    return { status: 'OK', message: 'Expense created successfully' }; 
   } catch (error: any) {
     return {status: 'error', message: error.message};
-  } */
+  }
 }
 
 export async function updateExpense(expense: Expense) {
