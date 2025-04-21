@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "my-app2",
-    "slug": "my-app2",
+    "name": "my-app",
+    "slug": "my-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.elhugobaizan.myapp"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +37,21 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "2033de33-7ddd-4a13-9f01-df4f9e5083bf"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/2033de33-7ddd-4a13-9f01-df4f9e5083bf"
+    },
+    "owner": "elhugobaizan"
   }
 }
