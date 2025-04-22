@@ -62,6 +62,7 @@ export function Home() {
                     budget: parseInt(text)
                   }
                 });
+                AsyncStorage.setItem('budget', text);
               }}
             />
             </View>
