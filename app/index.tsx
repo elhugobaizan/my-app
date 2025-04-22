@@ -8,23 +8,25 @@ const Stack = createNativeStackNavigator();
 export default function Index() {
   
   return (
-    <Stack.Navigator
-    initialRouteName='Home'>
-    <Stack.Screen
-      name='Home'
-      component={Home}      
-      options={{
-        headerShown: false
-      }}
-    />
-    <Stack.Screen
-      name='AddExpense'
-      component={AddExpense}
-    />
-    <Stack.Screen
-      name='EditExpense'
-      component={EditExpense}
-    />
-    </Stack.Navigator>
-  );
+    <NavigationContainer>
+      <Stack.Navigator
+      initialRouteName='Home'>
+      <Stack.Screen
+        name='Home'
+        component={Home}      
+        options={{
+          headerShown: false
+        }}
+      />
+      <Stack.Screen
+        name='AddExpense'
+        component={AddExpense}
+      />
+      <Stack.Screen
+        name='EditExpense'
+        component={EditExpense}
+      />
+      </Stack.Navigator>
+    </NavigationContainer>
+    );
 }
